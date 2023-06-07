@@ -8,7 +8,7 @@ dotenv_path = find_dotenv()
 load_dotenv(dotenv_path)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY', '')
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'default-secret-key')
 
 DEBUG = bool(strtobool(os.getenv('DEBUG', 'False')))
 
